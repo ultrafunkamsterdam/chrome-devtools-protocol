@@ -1245,7 +1245,7 @@ class Cookie:
             value=str(json['value']),
             domain=str(json['domain']),
             path=str(json['path']),
-            expires=float(json['expires']),
+            expires=float(json['expires']) if json['expires'] is not None else None,
             size=int(json['size']),
             http_only=bool(json['httpOnly']),
             secure=bool(json['secure']),
