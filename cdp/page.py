@@ -1577,7 +1577,7 @@ def capture_screenshot(
         'params': params,
     }
     json = yield cmd_dict
-    return bytes(json['data'])
+    return str(json['data'])
 
 
 def capture_snapshot(
